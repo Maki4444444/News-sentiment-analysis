@@ -42,7 +42,8 @@ def filter_by_stock(df, ticker):
     print(f"✅ Found {len(filtered)} articles for {ticker}.")
     return filtered
 
-    def load_stock_data(filepath):
+
+def load_stock_data(filepath):
     """
     Load a stock CSV file, enforce correct data types,
     sort by date and handle missing values.
@@ -72,4 +73,5 @@ def filter_by_stock(df, ticker):
         df.ffill(inplace=True)
     else:
         print(f"✅ Loaded {len(df)} rows. No missing values.")
-        return df
+
+    return df
